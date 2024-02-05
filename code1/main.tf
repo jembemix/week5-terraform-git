@@ -9,7 +9,7 @@ terraform {
 
 provider "aws" {
 
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
 resource "aws_iam_group" "developers" {
@@ -19,4 +19,12 @@ resource "aws_iam_group" "developers" {
 
 resource "aws_iam_user" "lb" {
   name = "punda2025"
+}
+
+resource "aws_iam_user" "ansible " {
+  name = "loadbalancer"
+}
+
+resource "aws_iam_group" "ansiblegroup" {
+  name = "ansiblegroup"
 }
